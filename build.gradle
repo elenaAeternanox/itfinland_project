@@ -66,10 +66,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task tag_tests(type: Test) {
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags System.getProperty("tag", "tag")
-    }
-}
