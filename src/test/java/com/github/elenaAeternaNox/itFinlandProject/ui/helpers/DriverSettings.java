@@ -1,7 +1,7 @@
 package com.github.elenaAeternaNox.itFinlandProject.ui.helpers;
 
-import com.github.elenaAeternaNox.itFinlandProject.ui.config.Project;
 import com.codeborne.selenide.Configuration;
+import com.github.elenaAeternaNox.itFinlandProject.ui.config.Project;
 import com.github.elenaAeternaNox.itFinlandProject.ui.config.ProjectConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -48,5 +48,6 @@ public class DriverSettings {
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
+        Configuration.timeout = 10000;
     }
 }
