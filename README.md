@@ -3,7 +3,7 @@
 
 ___
 
-## The project is prepared with technologies:
+## The project is done with the following technologies:
 
 <p  align="center"
 
@@ -26,7 +26,7 @@ ___
 
 ___
 
-## The list of tests grouped by tag parameter:
+## The list of tests grouped by a tag parameter:
 
 **"all_tests"** - includes all tests in the project (tags "main_page" and "top_menu"):
 
@@ -78,16 +78,17 @@ test
 ```
 
 where:
-> + tag - :point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-grouped-by-tag-parameter) for select suites tests, which will be runned in the build (by default - all_tests)
-> + environment - environment, where build will be runned:
->   * `prod` - production (by default)
+> + tag - :point_up: [The list of tests grouped by a tag parameter](#the-list-of-tests-grouped-by-tag-parameter) selected test suites which will be run in the build (by default - all_tests)
+> + environment - environment, where build will be run:
+    >
+* `prod` - production (by default)
 >   * `dev` - staging for development
 > + browser - browser for running tests (by default - chrome)
-> + browserVersion - version of selected browser (by default - 91.0)
-> + browserSize - size of selected browser (by default - 1920x1080)
+> + browserVersion - version of a selected browser (by default - 91.0)
+> + browserSize - size of a selected browser (by default - 1920x1080)
 > + browserMobileView - phone model for running mobile tests (by default - empty)
-> + URL - address of remote server, where build will be runned (by default - selenoid.autotests.cloud)
-> + videoStorage - storage of runned tests videos (by default - selenoid.autotests.cloud/video/)
+> + URL - address of a remote server, where build will be run (by default - selenoid.autotests.cloud)
+> + videoStorage - storage of run tests videos (by default - selenoid.autotests.cloud/video/)
 > + threads - the number of threads for running tests (by default - 5)
 
 ### Serve report:
@@ -119,8 +120,7 @@ After selecting the necessary parameters, you need to click the Submit (Собр
   <img src="images/screens/Jenkins_parameters.PNG">
 </p>
 
-After the finish of launch you may watch statistics and open
-the `Allure Report` <img width="2%" title="Allure Report" src="images/logo/Allure_Report_icon.svg">
+Once the launch is finished you may watch statistics and open the `Allure Report` <img width="2%" title="Allure Report" src="images/logo/Allure_Report_icon.svg">
 
 <p align="center">
   <img src="images/screens/Jenkins_statistic.PNG">
@@ -128,9 +128,11 @@ the `Allure Report` <img width="2%" title="Allure Report" src="images/logo/Allur
 
 ### Allure Report
 
-It's the examples of report about test build with grouping by tags (:point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-grouped-by-tag-parameter))
+Here are the examples of a report about test build with grouping by tags (:
+point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-grouped-by-tag-parameter))
 
- :arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/32/allure/)
+:
+arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/32/allure/)
 
 <p align="center">
   <img src="images/screens/Allure_results_2.PNG">
@@ -166,7 +168,7 @@ Allure TestOps is used as a storage for all tests cases (automated and manual), 
 
 ### Jira
 
-Also Jira integration is realised in the project:
+Also Jira integration is implemented in the project:
 
 <p align="center">
   <img src="images/screens/Jira.PNG">
@@ -177,7 +179,7 @@ ___
 
 ## Example of video with test running in Allure Report
 
-You may look the example of video test running in Allure report
+You may see the example of a video showing the test run in Allure report.
 
 <p align="center">
   <img src="images/screens/Test_video_example.gif">
