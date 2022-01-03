@@ -11,7 +11,8 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
 @Tags({@Tag("all_tests"), @Tag("top_menu")})
@@ -23,7 +24,7 @@ public class TopMenuTests extends TestBase {
     @Test
     @DisplayName("Check the 'For companies' item")
     void checkForCompaniesItem() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
         checkItemExists("For companies").$(byText("For companies")).click();
 
         step("Check: the 'Contact Us' section is displayed", () ->
@@ -38,7 +39,7 @@ public class TopMenuTests extends TestBase {
     @Test
     @DisplayName("Check the 'For IT professionals' item")
     void checkForItProfessionalsItem() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
         checkItemExists("For companies").$(byText("For IT professionals")).click();
 
         step("Check: the 'Contact Us' section is displayed", () ->
@@ -53,7 +54,7 @@ public class TopMenuTests extends TestBase {
     @Test
     @DisplayName("Check the 'Contact us' item")
     void checkContactUsItem() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
         checkItemExists("For companies").$(byText("Contact us")).click();
 
         step("Check: the 'Contact Us' title is displayed", () ->

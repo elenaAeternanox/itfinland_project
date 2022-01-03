@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class ItFinlandSteps {
 
     @DisplayName("Open main page")
-    public ItFinlandSteps openManePage() {
+    public ItFinlandSteps openMainPage() {
         open("https://itfinland.com/");
         return this;
     }

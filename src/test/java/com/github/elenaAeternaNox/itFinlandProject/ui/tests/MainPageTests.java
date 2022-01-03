@@ -1,15 +1,18 @@
 package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 
-import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
 import com.codeborne.selenide.SelenideElement;
+import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
 import io.qameta.allure.Feature;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tags({@Tag("all_tests"), @Tag("main_page")})
 @Feature("MAIN_PAGE_COMMON")
@@ -20,7 +23,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Page title should have header 'ITFinland'")
     void titleTest() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
 
         step("Page title should have text 'IT Finland'", () -> {
             String expectedTitle = "IT Finland";
@@ -33,7 +36,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Check Main page is displayed")
     void checkMainPageIsDisplayed() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
 
         step("Check: top menu contains title 'NERDSBAY'", () -> {
                     topMenu.shouldBe(visible);
@@ -45,7 +48,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Check the top menu contains 3 items")
     void checkTopMenuContains3Items() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
 
         step("Check the top menu contains 3 items", () -> {
                     int topMenuActualSize = topMenu.$$(".t446__list").size();
@@ -63,7 +66,7 @@ public class MainPageTests extends TestBase {
         SelenideElement bottomWrapper = $(".t-section__bottomwrapper");
         SelenideElement button = bottomWrapper.$(".t-btn");
 
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
 
         step("Check the button for opening the Application form exists on the page", () -> {
                     bottomWrapper.scrollIntoView(true);
@@ -88,7 +91,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        itFinlandSteps.openManePage();
+        itFinlandSteps.openMainPage();
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
