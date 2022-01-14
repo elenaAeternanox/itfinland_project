@@ -1,5 +1,7 @@
 package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 
+import allure.Layer;
+import allure.Microservice;
 import com.codeborne.selenide.SelenideElement;
 import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
 import io.qameta.allure.Feature;
@@ -25,6 +27,7 @@ public class MainPageTests extends TestBase {
 
     private SelenideElement topMenu = $(".t446__maincontainer");
 
+    @Microservice("Main page title")
     @Test
     @DisplayName("Page title should have header 'ITFinland'")
     void titleTest() {
@@ -38,6 +41,7 @@ public class MainPageTests extends TestBase {
         });
     }
 
+    @Microservice("Main page")
     @Test
     @DisplayName("Check Main page is displayed")
     void checkMainPageIsDisplayed() {
@@ -50,6 +54,7 @@ public class MainPageTests extends TestBase {
         );
     }
 
+    @Microservice("Top menu")
     @Test
     @DisplayName("Check the top menu contains 3 items")
     void checkTopMenuContains3Items() {
@@ -64,6 +69,7 @@ public class MainPageTests extends TestBase {
         );
     }
 
+    @Microservice("Main page")
     @Feature("MAIN_PAGE_NAVIGATION")
     @Test
     @DisplayName("Check the button for opening the Application form")
@@ -93,6 +99,7 @@ public class MainPageTests extends TestBase {
         );
     }
 
+    @Microservice("Main page errors")
     @Test
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {

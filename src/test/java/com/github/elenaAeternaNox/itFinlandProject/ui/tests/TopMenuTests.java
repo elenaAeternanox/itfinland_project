@@ -1,5 +1,7 @@
 package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 
+import allure.Layer;
+import allure.Microservice;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Feature;
@@ -26,6 +28,7 @@ public class TopMenuTests extends TestBase {
 
     private SelenideElement contactUsSection = $(".t525__container");
 
+    @Microservice("For companies")
     @Test
     @DisplayName("Check the 'For companies' item")
     void checkForCompaniesItem() {
@@ -41,6 +44,7 @@ public class TopMenuTests extends TestBase {
         );
     }
 
+    @Microservice("For IT professionals")
     @Test
     @DisplayName("Check the 'For IT professionals' item")
     void checkForItProfessionalsItem() {
@@ -56,6 +60,7 @@ public class TopMenuTests extends TestBase {
         );
     }
 
+    @Microservice("Contact us")
     @Test
     @DisplayName("Check the 'Contact us' item")
     void checkContactUsItem() {
