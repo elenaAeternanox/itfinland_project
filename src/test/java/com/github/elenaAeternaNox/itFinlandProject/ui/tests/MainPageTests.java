@@ -3,6 +3,7 @@ package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 import com.codeborne.selenide.SelenideElement;
 import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -14,6 +15,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Story("ItFinland")
 @Tags({@Tag("all_tests"), @Tag("main_page")})
 @Feature("MAIN_PAGE_COMMON")
 public class MainPageTests extends TestBase {
