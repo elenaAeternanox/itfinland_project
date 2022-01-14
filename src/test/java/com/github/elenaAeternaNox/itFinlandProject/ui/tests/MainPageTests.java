@@ -1,7 +1,7 @@
 package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 
-import allure.Layer;
-import allure.Microservice;
+import annotations.Layer;
+import annotations.Microservice;
 import com.codeborne.selenide.SelenideElement;
 import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
 import io.qameta.allure.Feature;
