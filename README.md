@@ -80,8 +80,7 @@ test
 where:
 > + tag - :point_up: [The list of tests grouped by a tag parameter](#the-list-of-tests-grouped-by-tag-parameter) selected test suites which will be run in the build (by default - all_tests)
 > + environment - environment, where build will be run:
-    >
-* `prod` - production (by default)
+>   * `prod` - production (by default)
 >   * `dev` - staging for development
 > + browser - browser for running tests (by default - chrome)
 > + browserVersion - version of a selected browser (by default - 91.0)
