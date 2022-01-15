@@ -129,13 +129,13 @@ Once the launch is finished you may watch statistics and open the `Allure Report
 
 Here are the examples of a report about test build with grouping by tags (:point_up: [The list of tests grouped by tag parameter](#the-list-of-tests-grouped-by-tag-parameter))
 
-:arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/32/allure/)
+:arrow_right: [The launch with results for tag = main_page](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/93/allure/)
 
 <p align="center">
   <img src="images/screens/Allure_results_2.PNG">
 </p>
 
-:arrow_right: [The launch with results for tag = top_menu](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/33/allure/)
+:arrow_right: [The launch with results for tag = top_menu](https://jenkins.autotests.cloud/job/09-elenakomarova-itfinland-project-ui/94/allure/)
 
 <p align="center">
   <img src="images/screens/Allure_results_1.PNG">
