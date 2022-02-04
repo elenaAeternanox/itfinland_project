@@ -1,5 +1,10 @@
 # The test automation project for [ITFinland website](https://itfinland.com/)
 
+<p align="center">
+  <img src="images/screens/ITFinland_screen.png">
+</p>
+
+
 
 ___
 
@@ -145,10 +150,18 @@ Here are the examples of a report about test build with grouping by tags (:point
 
 Allure TestOps is used as a storage for all tests cases (automated and manual), launches, their results. You may watch statistic and reports by all launches and results
 
-:arrow_right: Dashboard:
+:arrow_right: Dashboards:
 
 <p align="center">
-  <img src="images/screens/Allure_TestOps_dashboard.PNG">
+  <img src="images/screens/Allure_TestOps_dashboard_stages.png">
+</p>
+
+<p align="center">
+  <img src="images/screens/Allure_TestOps_dashboard_team.png">
+</p>
+
+<p align="center">
+  <img src="images/screens/Allure_TestOps_dashboard_automation.png">
 </p>
 
 :arrow_right: List of launches:
