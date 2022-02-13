@@ -4,14 +4,14 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.AllureAttachments;
 import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverSettings;
-import com.github.elenaAeternaNox.itFinlandProject.ui.steps.ItFinlandSteps;
+import com.github.elenaAeternaNox.itFinlandProject.ui.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
 
-    ItFinlandSteps itFinlandSteps = new ItFinlandSteps();
+    MainPage mainPage = new MainPage();
 
     @BeforeAll
     static void setUp() {

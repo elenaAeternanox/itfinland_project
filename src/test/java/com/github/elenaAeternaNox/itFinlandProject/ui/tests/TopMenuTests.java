@@ -2,8 +2,6 @@ package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
 
 import annotations.Layer;
 import annotations.Microservice;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -12,13 +10,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-import static io.qameta.allure.Allure.step;
-
 @Layer("web")
 @Owner("ekomarova")
 @Story("ItFinland")
@@ -26,58 +17,38 @@ import static io.qameta.allure.Allure.step;
 @Feature("MAIN_PAGE_NAVIGATION")
 public class TopMenuTests extends TestBase {
 
-    private SelenideElement contactUsSection = $(".t525__container");
+    private static String
+            forCompanies = "For companies",
+            forItProfessionals = "For IT professionals",
+            contactUs = "Contact us";
 
     @Microservice("For companies")
     @Test
     @DisplayName("Check the 'For companies' item")
     void checkForCompaniesItem() {
-        itFinlandSteps.openMainPage();
-        checkItemExists("For companies").$(byText("For companies")).click();
-
-        step("Check: the 'Contact Us' section is displayed", () ->
-                contactUsSection.shouldBe(visible)
-        );
-
-        step("Check: the the 'Contact Us' section contains 'Looking for IT employee, please contact' on the first place", () ->
-                contactUsSection.$$(".t525__col").first().shouldHave(text("Looking for IT employee, please contact"))
-        );
+        mainPage.openMainPage()
+                .clickTopMenuItem(forCompanies, forCompanies)
+                .checkContactUsSectionIsDisplayed()
+                .checkContactUsSectionHasTextOnFirstPlace("Looking for IT employee, please contact");
     }
 
     @Microservice("For IT professionals")
     @Test
     @DisplayName("Check the 'For IT professionals' item")
     void checkForItProfessionalsItem() {
-        itFinlandSteps.openMainPage();
-        checkItemExists("For companies").$(byText("For IT professionals")).click();
-
-        step("Check: the 'Contact Us' section is displayed", () ->
-                contactUsSection.shouldBe(visible)
-        );
-
-        step("Check: the the 'Contact Us' section contains 'Looking for IT employee, please contact' on the first place", () ->
-                contactUsSection.$$(".t525__col").findBy(text("Looking for IT job opportunities in Finland, please contact"))
-        );
+        mainPage.openMainPage()
+                .clickTopMenuItem(forCompanies, forItProfessionals)
+                .checkContactUsSectionIsDisplayed()
+                .checkContactUsSectionHasText("Looking for IT job opportunities in Finland, please contact");
     }
 
     @Microservice("Contact us")
     @Test
     @DisplayName("Check the 'Contact us' item")
     void checkContactUsItem() {
-        itFinlandSteps.openMainPage();
-        checkItemExists("For companies").$(byText("Contact us")).click();
-
-        step("Check: the 'Contact Us' title is displayed", () ->
-                $$(".t-section__title").findBy(text("CONTACT US")).shouldBe(visible)
-        );
-    }
-
-    @DisplayName("Check: the {item} exists")
-    private SelenideElement checkItemExists(String itemName) {
-        ElementsCollection topMenuList = $(".t446__maincontainer").$$(".t446__list");
-
-        SelenideElement item = topMenuList.findBy(text(itemName));
-        item.shouldBe(visible);
-        return item;
+        mainPage.openMainPage()
+                .clickTopMenuItem(forCompanies, contactUs)
+                .checkContactUsSectionIsDisplayed()
+                .checkContactUsTitleIsDisplayed();
     }
 }
