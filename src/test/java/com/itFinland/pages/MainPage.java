@@ -25,8 +25,8 @@ public class MainPage {
 
     @Step("Open main page")
     public MainPage openPage() {
-        Configuration.baseUrl = "http://demowebshop.tricentis.com/";
-        open("https://itfinland.com/");
+        Configuration.baseUrl = "https://itfinland.com/";
+        open();
         return this;
     }
 
