@@ -22,7 +22,6 @@ allure {
 }
 
 dependencies {
-    implementation 'io.qameta.allure:allure-java-commons:2.16.1'
     testImplementation(
             "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
@@ -45,9 +44,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags System.getProperty("tag", "all_tests")
-    }
+    useJUnitPlatform()
 
     if (System.getProperty("threads") != null) {
         systemProperties += [
