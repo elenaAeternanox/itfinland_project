@@ -16,6 +16,8 @@ public interface ProjectConfig extends Config {
 
     String environment();
 
+    String mainUrl();
+
     @DefaultValue("chrome")
     String browser();
 

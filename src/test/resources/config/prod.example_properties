@@ -1,0 +1,4 @@
+login=user1
+password=1234
+environment=prod
+mainUrl=https://itfinland.com/

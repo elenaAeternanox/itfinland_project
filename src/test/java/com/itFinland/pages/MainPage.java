@@ -3,13 +3,17 @@ package com.itFinland.pages;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import com.itFinland.config.ProjectConfig;
 import io.qameta.allure.Step;
+import org.aeonbits.owner.ConfigFactory;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
+
+    ProjectConfig credentials = ConfigFactory.create(ProjectConfig.class);
 
     private SelenideElement
             topMenu = $(".t446__maincontainer"),
@@ -25,8 +29,7 @@ public class MainPage {
 
     @Step("Open main page")
     public MainPage openPage() {
-        Configuration.baseUrl = "https://itfinland.com/";
-        open();
+        open(credentials.mainUrl());
         return this;
     }
 
