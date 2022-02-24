@@ -1,4 +1,4 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.helpers;
+package com.itFinland.helpers;
 
 import com.codeborne.selenide.Selenide;
 

@@ -1,5 +1,6 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.pages;
+package com.itFinland.pages;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -17,14 +18,14 @@ public class MainPage {
             button = bottomWrapper.$(".t-btn"),
             contactUsSection = $(".t525__container");
 
-
     private ElementsCollection
             topMenuList = topMenu.$$(".t446__list"),
             contactUsSectionItemsList = contactUsSection.$$(".t525__col"),
             topMenuSectionItems = $$(".t-section__title");
 
     @Step("Open main page")
-    public MainPage openMainPage() {
+    public MainPage openPage() {
+        Configuration.baseUrl = "http://demowebshop.tricentis.com/";
         open("https://itfinland.com/");
         return this;
     }

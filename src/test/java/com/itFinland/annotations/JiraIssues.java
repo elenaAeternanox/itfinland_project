@@ -1,4 +1,4 @@
-package annotations;
+package com.itFinland.annotations;
 
 import java.lang.annotation.*;
 

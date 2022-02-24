@@ -1,8 +1,7 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
+package com.itFinland.tests;
 
-import annotations.Layer;
-import annotations.Microservice;
-import com.github.elenaAeternaNox.itFinlandProject.ui.config.ProjectConfig;
+import com.itFinland.annotations.Layer;
+import com.itFinland.config.ProjectConfig;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -23,7 +22,6 @@ public class EnvironmentTest {
 
     public ProjectConfig credentials = ConfigFactory.create(ProjectConfig.class);
 
-    @Microservice("Environment")
     @Test
     void environmentTest() {
         String login = credentials.login();

@@ -1,8 +1,8 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.helpers;
+package com.itFinland.helpers;
 
 import com.codeborne.selenide.Configuration;
-import com.github.elenaAeternaNox.itFinlandProject.ui.config.Project;
-import com.github.elenaAeternaNox.itFinlandProject.ui.config.ProjectConfig;
+import com.itFinland.config.Project;
+import com.itFinland.config.ProjectConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;

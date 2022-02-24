@@ -1,7 +1,6 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
+package com.itFinland.tests;
 
-import annotations.Layer;
-import annotations.Microservice;
+import com.itFinland.annotations.Layer;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -22,31 +21,28 @@ public class TopMenuTests extends TestBase {
             forItProfessionals = "For IT professionals",
             contactUs = "Contact us";
 
-    @Microservice("For companies")
     @Test
     @DisplayName("Check the 'For companies' item")
     void checkForCompaniesItem() {
-        mainPage.openMainPage()
+        mainPage.openPage()
                 .clickTopMenuItem(forCompanies, forCompanies)
                 .checkContactUsSectionIsDisplayed()
                 .checkContactUsSectionHasTextOnFirstPlace("Looking for IT employee, please contact");
     }
 
-    @Microservice("For IT professionals")
     @Test
     @DisplayName("Check the 'For IT professionals' item")
     void checkForItProfessionalsItem() {
-        mainPage.openMainPage()
+        mainPage.openPage()
                 .clickTopMenuItem(forCompanies, forItProfessionals)
                 .checkContactUsSectionIsDisplayed()
                 .checkContactUsSectionHasText("Looking for IT job opportunities in Finland, please contact");
     }
 
-    @Microservice("Contact us")
     @Test
     @DisplayName("Check the 'Contact us' item")
     void checkContactUsItem() {
-        mainPage.openMainPage()
+        mainPage.openPage()
                 .clickTopMenuItem(forCompanies, contactUs)
                 .checkContactUsSectionIsDisplayed()
                 .checkContactUsTitleIsDisplayed();

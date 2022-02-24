@@ -1,8 +1,7 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.tests;
+package com.itFinland.tests;
 
-import annotations.Layer;
-import annotations.Microservice;
-import com.github.elenaAeternaNox.itFinlandProject.ui.helpers.DriverUtils;
+import com.itFinland.annotations.Layer;
+import com.itFinland.helpers.DriverUtils;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -23,11 +22,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("MAIN_PAGE_COMMON")
 public class MainPageTests extends TestBase {
 
-    @Microservice("Main page title")
     @Test
     @DisplayName("Page title should have header 'ITFinland'")
     void titleTest() {
-        mainPage.openMainPage();
+        mainPage.openPage();
 
         step("Page title should have text 'IT Finland'", () -> {
             String expectedTitle = "IT Finland";
@@ -37,11 +35,10 @@ public class MainPageTests extends TestBase {
         });
     }
 
-    @Microservice("Main page")
     @Test
     @DisplayName("Check Main page is displayed")
     void checkMainPageIsDisplayed() {
-        mainPage.openMainPage();
+        mainPage.openPage();
 
         step("Check: top menu contains title 'NERDSBAY'", () -> {
                     mainPage
@@ -51,11 +48,10 @@ public class MainPageTests extends TestBase {
         );
     }
 
-    @Microservice("Top menu")
     @Test
     @DisplayName("Check the top menu contains 3 items")
     void checkTopMenuContains3Items() {
-        mainPage.openMainPage();
+        mainPage.openPage();
 
         step("Check the top menu contains 3 items", () -> {
                     int topMenuActualSize = mainPage.getTopMenuItemsListSize();
@@ -66,19 +62,16 @@ public class MainPageTests extends TestBase {
         );
     }
 
-    @Microservice("Main page")
     @Feature("MAIN_PAGE_NAVIGATION")
     @Test
     @DisplayName("Check the button for opening the Application form")
     void checkApplicationFormButton() {
-        mainPage.openMainPage();
+        mainPage.openPage();
 
-        step("Check the button for opening the Application form exists on the page", () -> {
-                    mainPage
-                            .scrollToOpenApplicationButton()
-                            .checkRegistrationButton();
-                }
-        );
+        step("Check the button for opening the Application form exists on the page", () ->
+                mainPage
+                        .scrollToOpenApplicationButton()
+                        .checkRegistrationButton());
 
         step("Check the button opens the registration form", () -> {
                     String expectedTitle = "Job application";
@@ -93,11 +86,10 @@ public class MainPageTests extends TestBase {
         );
     }
 
-    @Microservice("Main page errors")
     @Test
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-        mainPage.openMainPage();
+        mainPage.openPage();
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();

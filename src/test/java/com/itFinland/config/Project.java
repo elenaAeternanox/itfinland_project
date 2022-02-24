@@ -1,4 +1,4 @@
-package com.github.elenaAeternaNox.itFinlandProject.ui.config;
+package com.itFinland.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
